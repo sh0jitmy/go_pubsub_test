@@ -1,0 +1,13 @@
+version: '3.7'
+services:
+  redis-master:
+    restart: always 
+    image: redis:5.0.6
+    hostname: redis-master
+    volumes:
+      - redis_master:/data
+    ports:
+      - '6379:6379'
+
+volumes:
+  redis_master:
